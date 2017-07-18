@@ -5,30 +5,30 @@ export function getMeta() {
 		className: 'mk-app-login',
 		children: [{
 			name: 'header',
-			className: 'header',
+			className: 'mk-app-login-header',
 			component: 'Layout',
 			children: [{
 				name: 'logo',
 				component: '::img',
-				className: 'header-logo',
+				className: 'mk-app-login-header-logo',
 				src: '{{$getLogo()}}'
 			}, 'Monkey King']
 		}, {
 			name: 'content',
-			className: 'content',
+			className: 'mk-app-login-content',
 			component: 'Layout',
 			children: [{
 				name: 'contentLeft',
-				className: 'content-left',
+				className: 'mk-app-login-content-left',
 				component: 'Layout',
 			}, {
 				name: 'form',
 				component: 'Form',
-				className: 'content-form',
+				className: 'mk-app-login-content-form',
 				children: [{
 					name: 'item1',
 					component: 'Form.Item',
-					className: 'content-form-title',
+					className: 'mk-app-login-content-form-title',
 					children: 'Login'
 				}, {
 					name: 'item2',
@@ -95,14 +95,14 @@ export function getMeta() {
 				}]
 			}, {
 				name: 'contentRight',
-				className: 'content-right',
+				className: 'mk-app-login-content-right',
 				component: 'Layout',
 			},]
 		}, {
 			name: 'footer',
-			className: 'footer',
+			className: 'mk-app-login-footer',
 			component: 'Layout',
-			children: 'copyright © 2015-2017 monkey king'
+			children: 'copyright © 2015-2017 Monkey King'
 		}]
 	}
 }
