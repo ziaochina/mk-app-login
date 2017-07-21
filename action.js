@@ -5,6 +5,8 @@ import config from './config'
 class action {
     constructor(option) {
         this.metaAction = option.metaAction
+        this.config = config.current
+        this.webapi = this.config.webapi
     }
 
     onInit = ({ component, injections }) => {
@@ -13,18 +15,22 @@ class action {
         injections.reduce('init')
     }
 
-    getLogo = () => config.getCurrent().logo
+    getLogo = () => this.config.logo
 
     login = async () => {
-        const cfg = config.getCurrent()
-        const user = this.metaAction.gf('data.form.user')
-        const password = this.metaAction.gf('data.form.password')
+        const form = this.metaAction.gf('data.form').toJS()
+        const response = await this.webapi.user.login(form)
+        this.metaAction.context.set('user', ret.value.user)
 
-        const ret = await config.getCurrent().loginApi(user, password)
+        if (this.component.props.onRedirect && this.config.goAfterLogin) {
+           
+            this.component.props.onRedirect(this.config.goAfterLogin)
+        }
+
         if (ret.result && ret.value) {
-            if (this.component.props.onRedirect && cfg.rediectInfo) {
+            if (this.component.props.onRedirect && this.config.goAfterLogin) {
                 this.metaAction.context.set('user', ret.value.user)
-                this.component.props.onRedirect(cfg.rediectInfo)
+                this.component.props.onRedirect(this.config.goAfterLogin)
             }
         }
         else {

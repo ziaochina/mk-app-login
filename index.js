@@ -1,11 +1,11 @@
 import config from './config'
-import * as api from './api'
+import * as data from './data'
 
 export default {
 	name: "mk-app-login",
 	version: "1.0.0",
 	description: "mk-app-login",
-	meta: api.getMeta(),
+	meta: data.getMeta(),
 	components: [],
 	config: config,
 	load: (cb) => {
