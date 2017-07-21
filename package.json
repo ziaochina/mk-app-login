@@ -1,6 +1,6 @@
 {
   "name": "mk-app-login",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mk-app-login",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ziaochina/mk-app-login/issues"
   },
