@@ -1,12 +1,16 @@
 import { Toast, Notification, Modal } from 'mk-component'
 import { fetch } from 'mk-utils'
 
-//import './mock.js' //启用mock
+import './mock.js' //启用mock
 fetch.config({
-	//mock:true, //启用mock
+	mock:true, //启用mock
 	after:(response)=>{
 		if(response.result){
 			return response.value
+		}
+		else{
+			Toast.error(response.error.message)
+			throw response.error
 		}
 	}
 })
@@ -27,7 +31,7 @@ function config(options) {
 	}
 
 	_options.targetDomId = 'app'
-	_options.startAppName = '***' //mk-app-root
+	_options.startAppName = 'mk-app-login' //mk-app-root
 	//options.apps['mk-app-root'].config({defaultAppName:'app-demo'})
 
 	_options.toast = Toast
