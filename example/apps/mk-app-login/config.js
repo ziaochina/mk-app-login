@@ -4,7 +4,7 @@ import logo from './img/logo.png'
 var _options = {
 	webapi,
 	goAfterLogin: {
-		appName: 'portal',
+		appName: 'mk-app-portal',
 		appParams: {}
 	},
 	logo: logo
