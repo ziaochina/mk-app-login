@@ -16,5 +16,5 @@ $ npm start
 
 ```
 $ npm i mk-tools -g
-$ mk clone mk-app-login [别名可空]
+$ mk clone mk-app-login apps/login
 ```
