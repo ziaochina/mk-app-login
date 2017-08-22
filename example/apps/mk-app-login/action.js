@@ -76,6 +76,7 @@ class action {
         })
 
         this.metaAction.sfs(json)
+
         return hasError
     }
 

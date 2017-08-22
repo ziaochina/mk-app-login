@@ -5,9 +5,8 @@ import myConfig  from './config'
 import mk_app_login from './apps/mk-app-login/index.js'
 
 const apps = {
-	
+		
 	[mk_app_login.name]: mk_app_login,
-
 }
 
 apps.config = (options) => {

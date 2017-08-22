@@ -59,7 +59,7 @@ export function getMeta() {
 						component: 'Input',
 						placeholder: '请录入密码',
 						type: 'password',
-						onChange: "{{(e)=>$fieldChange('data.form.password', e.target.value)}}",
+						onChange: `{{(e)=>$fieldChange('data.form.password', e.target.value)}}`,
 						value: '{{data.form.password}}',
 						prefix: {
 							name: 'passwordIcon',
@@ -122,7 +122,9 @@ export function getInitState() {
 	return {
 		data: {
 			form: { user: '', password: '' },
-			other: { error: {} }
+			other: {
+				error: {}
+			}
 
 		}
 	}
