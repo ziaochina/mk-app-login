@@ -7,6 +7,10 @@ var _options = {
 		appName: 'mk-app-portal',
 		appParams: {}
 	},
+	goRegister:{
+		appName: 'mk-app-register',
+		appParams: {}
+	},
 	logo: logo
 }
 
