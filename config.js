@@ -11,6 +11,10 @@ var _options = {
 		appName: 'mk-app-register',
 		appParams: {}
 	},
+	goForgot:{
+		appName: 'mk-app-forgot-password',
+		appParams: {}
+	},
 	logo: logo
 }
 
