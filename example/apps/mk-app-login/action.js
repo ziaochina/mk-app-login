@@ -29,7 +29,7 @@ class action {
         if (!ok) return
 
         const response = await this.webapi.user.login(form)
-        this.metaAction.context.set('user', response.user)
+        this.metaAction.context.set('currentUser', response)
 
         if (this.component.props.onRedirect && this.config.goAfterLogin) {
             this.component.props.onRedirect(this.config.goAfterLogin)
