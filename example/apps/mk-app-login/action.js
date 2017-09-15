@@ -46,7 +46,6 @@ class action {
     }
 
     goForgot = () =>{
-        debugger
         if(!this.config.apps['mk-app-forgot-password']){
             throw '请将这个应用加入到带mk-app-root和mk-app-forgot-password的网站中，跳转功能才能正常使用'
         }
