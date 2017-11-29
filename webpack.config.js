@@ -69,7 +69,7 @@ module.exports = {
         "mk-utils": {
             root:["MK","utils"],
             commonjs2:"MK.utils",
-            amd:"MK.appLoader",
+            amd:"MK.utils",
             commonjs:"MK.utils",
            
         },
