@@ -33,7 +33,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, "/dist/"),
         library: "MKAppLogin",
-        libraryTarget: "umd"
+        libraryTarget: "umd",
+        publicPath: '/apps/mk-app-login/'
     },
 
     resolve: {
@@ -109,7 +110,7 @@ module.exports = {
             use: {
                 loader: 'url-loader',
                 options: {
-                    name: './[name].[ext]',
+                    name: '[name].[ext]',
                     limit: 8192
                 }
             }
