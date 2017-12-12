@@ -1,3 +1,4 @@
+__webpack_public_path__ = window["__pub_mk-app-login__"];
 
 import config from './config'
 import * as data from './data'

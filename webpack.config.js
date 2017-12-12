@@ -33,8 +33,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, "/dist/"),
         library: "MKAppLogin",
-        libraryTarget: "umd",
-        publicPath: '/apps/mk-app-login/'
+        libraryTarget: "umd"
     },
 
     resolve: {
