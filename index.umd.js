@@ -1,9 +1,9 @@
 __webpack_public_path__ = window["__pub_mk-app-login__"];
 
-import config from './config'
-import * as data from './data'
-import './mock.js'
-import './style.less'
+const data = require('./data')
+const config = require('./config')
+require('./mock.js')
+require('./style.less')
 
 export default {
     name: "mk-app-login",
