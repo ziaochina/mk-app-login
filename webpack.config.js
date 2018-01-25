@@ -31,6 +31,7 @@ plugins.push(extractCSS)
 module.exports = {
     entry: ["./index.umd.js"],
     output: {
+        filename: env === 'production' ? 'mk-app-login.min.js': 'mk-app-login.js',
         path: path.join(__dirname, "/dist/"),
         library: "MKAppLogin",
         libraryTarget: "umd"
